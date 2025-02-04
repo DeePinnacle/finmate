@@ -65,91 +65,96 @@
   /* General Page Styling */
   body {
     margin: 0;
-    @apply bg-finmate_primary font-geist text-slate-300
+    @apply bg-finmate_primary font-geist text-slate-300;
   }
 
-    /* Hero Section with Radial Gradient */
-    .hero {
-      /* position: relative;
+  /* Hero Section with Radial Gradient */
+  .hero {
+    /* position: relative;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       overflow: hidden; */
-      background: radial-gradient(circle at top center, black, #11271A);
-      @apply relative w-full overflow-hidden
-    }
+    background: radial-gradient(circle at top center, black, #11271a);
+    @apply relative w-full overflow-hidden;
+  }
 
-    /* Square Grid Pattern Overlay */
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-      background-size: 20px 20px; /* Size of each grid cell */
-      opacity: 0.3;
-      z-index: 1;
-    }
+  /* Square Grid Pattern Overlay */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.2) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px; /* Size of each grid cell */
+    opacity: 0.3;
+    z-index: 1;
+  }
 
-    /* Blurry Edges Overlay */
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      /* Duplicate the background (so that the blur applies to the edges) */
-      background: radial-gradient(circle at top center, black, #11271A);
-      filter: blur(8px);
-      z-index: 2;
-      /* Use a mask to apply the blur only at the edges */
-      -webkit-mask-image: radial-gradient(closest-side, transparent 70%, #11271A 100%);
-              mask-image: radial-gradient(closest-side, transparent 70%, #11271A 100%);
-    }
+  /* Blurry Edges Overlay */
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Duplicate the background (so that the blur applies to the edges) */
+    background: radial-gradient(circle at top center, black, #11271a);
+    filter: blur(8px);
+    z-index: 2;
+    /* Use a mask to apply the blur only at the edges */
+    -webkit-mask-image: radial-gradient(
+      closest-side,
+      transparent 70%,
+      #11271a 100%
+    );
+    mask-image: radial-gradient(closest-side, transparent 70%, #11271a 100%);
+  }
 
-    /* Hero Content (stays crisp) */
-    /* .hero-content {
+  /* Hero Content (stays crisp) */
+  /* .hero-content {
       position: relative;
       z-index: 3;
     } */
 
+  /* Feature Section with Radial Gradient */
+  .feature-section {
+    /* background: radial-gradient(circle at top center, black, #11271A); */
+    @apply relative w-full overflow-hidden;
+  }
 
-    /* Feature Section with Radial Gradient */
-.feature-section {
-  /* background: radial-gradient(circle at top center, black, #11271A); */
-  @apply relative w-full overflow-hidden;
-}
+  /* Hexagon Grid Pattern Overlay */
+  .feature-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.2) 30%,
+        transparent 30%
+      ),
+      radial-gradient(rgba(255, 255, 255, 0.2) 30%, transparent 30%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 43px; /* Offset second layer for staggered hexagon effect */
+    opacity: 0.3;
+    z-index: 1;
+  }
 
-/* Hexagon Grid Pattern Overlay */
-.feature-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.2) 30%, transparent 30%),
-    radial-gradient(rgba(255, 255, 255, 0.2) 30%, transparent 30%);
-  background-size: 50px 50px;
-  background-position: 
-    0 0, 
-    25px 43px; /* Offset second layer for staggered hexagon effect */
-  opacity: 0.3;
-  z-index: 1;
-}
-
-/* Blurry Edges Overlay */
-/* .feature-section::after {
+  /* Blurry Edges Overlay */
+  /* .feature-section::after {
   content: "";
   position: absolute;
   top: 0;
@@ -163,6 +168,18 @@
   -webkit-mask-image: radial-gradient(closest-side, transparent 70%, #11271A 100%);
           mask-image: radial-gradient(closest-side, transparent 70%, #11271A 100%);
 } */
-
-
+  .perspective {
+    perspective: 100px;
+  }
+  .perspective:hover .hover-effect {
+    transform-style: preserve-3d;
+    transform: translate(-10%);
+    transform: rotateY(-40deg);
+  }
+  .perspective .perspective-item {
+    transform-style: preserve-3d;
+    transform: translate(-10%);
+    /* transform: rotateX(10deg); */
+    transform: rotateY(-10deg);
+  }
 }

@@ -178,17 +178,39 @@ const Finmate = () => {
       </section>
       {/* ends here */}
 
-      {/* CTA Section starts here */}  
+      {/* CTA Section starts here */}
       <div className="w-full bg-finmate_secondary pb-7">
         <div className="w-full px-2">
-         {/* cta content */}
+          {/* cta content */}
           <div className="w-full py-8">
-            <p className="text-5xl text-finmate_primary font-semibold mb-4">Take Charge of Your Finances Today!</p>
-            <p className="my-3 text-lg">Transform your financial future with FinMate. Join thousands of users who are taking control of their money through smart tracking, dynamic budgeting, and actionable insights.</p>
-            <Link href={""} className="bg-finmate_primary px-2 py-5 h-16 w-3/5 my-3 text-lg text-finmate_secondary font-light flex flex-row items-center justify-center hover:bg-finmate_primary">Get Started for Free</Link>
+            <p className="text-5xl text-finmate_primary font-semibold mb-4">
+              Take Charge of Your Finances Today!
+            </p>
+            <p className="my-3 text-lg">
+              Transform your financial future with FinMate. Join thousands of
+              users who are taking control of their money through smart
+              tracking, dynamic budgeting, and actionable insights.
+            </p>
+            <Link
+              href={""}
+              className="bg-finmate_primary px-2 py-5 h-16 w-3/5 my-3 text-lg text-finmate_secondary font-light flex flex-row items-center justify-center hover:bg-finmate_primary"
+            >
+              Get Started for Free
+            </Link>
           </div>
           {/* cta image */}
-          <div className="w-full h-96 bg-finmate_primary rounded-lg my-4"></div>
+          <div className="w-full h-96 bg-finmate_primary rounded-lg my-4 pt-8 overflow-hidden">
+            <div className="w-full h-96 relative overflow-hidden">
+              <Image
+                src="/chart_1.png"
+                alt="chat"
+                fill
+                priority
+                objectFit="cover"
+                objectPosition="center"
+              />
+            </div>
+          </div>
         </div>
       </div>
       {/* CTA Section ends here */}
