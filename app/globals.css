@@ -121,4 +121,48 @@
       z-index: 3;
     } */
 
+
+    /* Feature Section with Radial Gradient */
+.feature-section {
+  /* background: radial-gradient(circle at top center, black, #11271A); */
+  @apply relative w-full overflow-hidden;
+}
+
+/* Hexagon Grid Pattern Overlay */
+.feature-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.2) 30%, transparent 30%),
+    radial-gradient(rgba(255, 255, 255, 0.2) 30%, transparent 30%);
+  background-size: 50px 50px;
+  background-position: 
+    0 0, 
+    25px 43px; /* Offset second layer for staggered hexagon effect */
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Blurry Edges Overlay */
+/* .feature-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at top center, black, #11271A);
+  filter: blur(8px);
+  z-index: 2;
+  -webkit-mask-image: radial-gradient(closest-side, transparent 70%, #11271A 100%);
+          mask-image: radial-gradient(closest-side, transparent 70%, #11271A 100%);
+} */
+
+
 }

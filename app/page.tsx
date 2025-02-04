@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Crown, PiggyBank } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { features } from "@/data/data";
 const Finmate = () => {
   return (
     <>
@@ -99,6 +100,31 @@ const Finmate = () => {
         </div>
       </section>
       {/* hero section ends */}
+
+      {/* feature section starts here */}
+      <section className="feature-section">
+        {/* content */}
+        <div className="w-full px-2 py-6 flex flex-col items-center justify-center">
+          <h1 className="text-3xl text-center">Features <span className="text-finmate_secondary">That Empower Your</span> Finances</h1>
+          <p className=" my-2 text-lg">What Sets FinMate Apart</p>
+          {/* feature contents */}
+          <div>
+            {
+              features?.map((feature)=>(
+                <div key={feature.id} className="w-full bg-finmate_secondary px-2 py-6 my-3">
+                  {< feature.icon className="text-finmate_primary my-3 text-5xl block mx-auto" />}
+                  <p className="text-finmate_primary text-3xl mb-3 text-center">{ feature.title }</p>
+                  <p className="text-finmate_primary text-center text-lg">{ feature.content }</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+      {/* feature section ends here */}
+      {/* How it works section starts here */}
+      <section></section>
+      {/* ends here */}
     </>
   );
 };
