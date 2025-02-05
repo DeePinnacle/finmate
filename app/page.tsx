@@ -1,10 +1,43 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Crown, PiggyBank } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { features, steps } from "@/data/data";
-import { Check } from "lucide-react";
+import { features, steps, testimonial, faqs } from "@/data/data";
+import { FaStar } from "react-icons/fa";
+
+// embla imports
+import useEmblaCarousel from "embla-carousel-react";
+import { EmblaOptionsType } from "embla-carousel";
+import {} from "embla-carousel-autoplay";
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons,
+} from "@/components/ui/EmblaButtons";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 const Finmate = () => {
+  // configuring the embla options
+  const OPTIONS: EmblaOptionsType = {
+    slidesToScroll: 1,
+    containScroll: "trimSnaps",
+    loop: false,
+  };
+  const [sliderRef, emblaApi] = useEmblaCarousel(OPTIONS);
+  // button configuration
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
   return (
     <>
       {/* hero section starts */}
@@ -214,6 +247,130 @@ const Finmate = () => {
         </div>
       </div>
       {/* CTA Section ends here */}
+      {/* testimonial section starts here */}
+      <div className="w-full py-7 px-2 bg-finmate_primary">
+        <div className="w-full p-2 bg-finmate_primary text-finmate_secondary">
+          <h1>Hear it From Our Users</h1>
+          <p>
+            Discover how FinMate is empowering everyday Nigerians to master
+            their finances and achieve their dreams.
+          </p>
+          <div className="slider__carousel">
+            <div className="slider__viewport" ref={sliderRef}>
+              <div className="slider__track my-6">
+                {testimonial?.map((item) => (
+                  <div key={item.id} className="slider__carousel__item">
+                    <div className="flex flex-row items-center gap-2">
+                      <div className="relative w-14 h-14 rounded-full overflow-hidden">
+                        <Image
+                          src="/user2.jpg"
+                          alt="testimonial-image"
+                          fill
+                          priority
+                          objectFit="cover"
+                          objectPosition="center"
+                        />
+                      </div>
+                      <p>{item.name}</p>
+                    </div>
+                    <p className="my-5 font-light">{item.testimony}</p>
+                    <span className="flex flex-row items-center gap-2 mb-2">
+                      <FaStar className="text-yellow-500 text-2xl" />
+                      <FaStar className="text-yellow-500 text-2xl" />
+                      <FaStar className="text-yellow-500 text-2xl" />
+                      <FaStar className="text-yellow-500 text-2xl" />
+                      <FaStar className="text-yellow-500 text-2xl" />
+                    </span>
+                    <p>{item.location}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="embla__controls">
+            <div className="embla__buttons">
+              <PrevButton
+                onClick={onPrevButtonClick}
+                disabled={prevBtnDisabled}
+              />
+              <NextButton
+                onClick={onNextButtonClick}
+                disabled={nextBtnDisabled}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ends here */}
+      {/* faq section starts here */}
+      <div className="w-full my-9">
+        <div className="w-full max-w-6xl px-2 py-4">
+          <div>
+            <h1 className="text-4xl font-semibold">
+              Frequently Asked Questions
+            </h1>
+            <p className="my-3">
+              Your top questions about FinMate answered—learn how to make the
+              most of your financial journey.
+            </p>
+            <div className="w-full h-80 relative overflow-hidden">
+              <Image
+                src="/faq.png"
+                alt="faq-image"
+                fill
+                priority
+                objectFit="cover"
+                objectPosition="center"
+              />
+            </div>
+          </div>
+          <div className="mt-4">
+            <Accordion type="single" collapsible className="w-full">
+              <div>
+                {faqs?.map((faq) => (
+                  <AccordionItem key={faq.id} value={`item-${faq.id}`}>
+                    <AccordionTrigger className="text-lg">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="font-light text-lg">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </div>
+            </Accordion>
+          </div>
+        </div>
+      </div>
+      {/* ends here */}
+
+      {/* footer section */}
+      <div className="w-full">
+        <span>
+          <p>FinMate</p>
+          <p>
+            FinMate is a comprehensive personal finance tracker designed to help
+            you log expenses, manage budgets, set savings goals, and generate
+            detailed financial reports—all in one user-friendly platform.
+          </p>
+        </span>
+        <ul>
+          <li>Quick Link</li>
+          <li>
+            <Link href="">About</Link>
+          </li>{" "}
+          <li>
+            <Link href="">Features</Link>
+          </li>{" "}
+          <li>
+            <Link href="">How it Works</Link>
+          </li>{" "}
+          <li>
+            <Link href="">FAQs</Link>
+          </li>
+        </ul>
+      </div>
+      {/* footer section ends */}
     </>
   );
 };

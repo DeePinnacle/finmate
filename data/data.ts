@@ -149,3 +149,87 @@ export const steps = [
         ]
     }
 ]
+
+export const testimonial = [
+    {
+        id: 1,
+        name: "Mrs. Suleiman Halima",
+        testimony: "FinMate has completely transformed the way I manage my expenses. It’s simple, effective, and has given me a whole new perspective on budgeting!",
+        location: "Abuja NG"
+    },
+    {
+        id: 2,
+        name: "Muhammad Abdul Rasak",
+        testimony: "I love how FinMate organizes my financial data. I can see my progress at a glance, and it motivates me to save more each month.",
+        location: "Ibadan",
+    },
+    {
+        id: 3,
+        name: "Zainab Lawal",
+        testimony: "Thanks to FinMate, I finally feel in control of my money. The intuitive design and personalized features have made budgeting fun and stress-free.",
+        location: "Kogi"
+    },
+    {
+        id: 4,
+        name: "Peace O.",
+        testimony: "FinMate is a game changer! The dynamic budgeting tools and easy expense tracking have helped me achieve my savings goals faster than I ever imagined.",
+        location: "Port-Harcourt"
+    },
+    {
+        id: 5,
+        name: "Meshach O.",
+        testimony: "I recommend FinMate to everyone looking to improve their financial health. Its clear insights and user-friendly interface make money management effortless.",
+        location: "Kaduna"
+    }
+]
+
+export const faqs = [
+    {
+      id: 0,
+      question: "What is FinMate?",
+      answer:
+        "FinMate is a comprehensive personal finance tracker designed to help you log expenses, manage budgets, set savings goals, and generate detailed financial reports—all in one user-friendly platform."
+    },
+    {
+      id: 1,
+      question: "How do I sign up for FinMate?",
+      answer:
+        "Simply click on the 'Get Started for Free' button, fill in your registration details, and customize your profile to begin tracking your finances immediately."
+    },
+    {
+      id: 2,
+      question: "Is my financial data secure with FinMate?",
+      answer:
+        "Absolutely. We use industry-standard encryption and best practices to ensure that all your personal and financial data remains safe and confidential."
+    },
+    {
+      id: 3,
+      question: "Can I customize the categories for my expenses?",
+      answer:
+        "Yes! FinMate allows you to create and modify custom categories and tags so you can organize your transactions in a way that suits your personal financial style."
+    },
+    {
+      id: 4,
+      question: "Do I need to connect my bank account to use FinMate?",
+      answer:
+        "No, FinMate currently allows you to manually input your transactions. This ensures you maintain full control over your data while still benefiting from robust tracking and reporting."
+    },
+    {
+      id: 5,
+      question: "Which devices are supported by FinMate?",
+      answer:
+        "FinMate is a web-based application accessible on desktops, laptops, and mobile devices, ensuring you can manage your finances on the go."
+    },
+    {
+      id: 6,
+      question: "How often is my financial data updated?",
+      answer:
+        "Since transactions are manually entered, your data updates in real time as you add new entries. This means you always have the most current view of your financial status."
+    },
+    {
+      id: 7,
+      question: "What should I do if I need help or have additional questions?",
+      answer:
+        "Our dedicated support team is here to help! Visit our Contact page or email support@finmate.com, and we'll be happy to assist you with any questions or concerns."
+    }
+  ]
