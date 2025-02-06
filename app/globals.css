@@ -218,4 +218,14 @@
     .embla__button__svg {
       @apply w-2/5 h-2/5 font-light;
     }
+    .footer-ui li{
+      @apply my-3
+    }
+    .get__started__style{
+      @apply bg-finmate_primary text-finmate_secondary px-2 py-3 h-14 w-3/5 flex flex-row items-center justify-center;
+      @apply rounded-full shadow-lg shadow-finmate_secondary/30 md:h-20 md:text-3xl lg:text-base;
+    }
+    .btn__work__style{
+      @apply bg-finmate_secondary text-finmate_primary px-2 py-3 h-14 w-3/5 flex flex-row items-center justify-center rounded-full shadow-lg shadow-finmate_secondary/30 hover:bg-transparent hover:delay-200 hover:transition-all hover:ease-in-out hover:text-finmate_secondary md:h-20 md:text-3xl
+    }
 }
