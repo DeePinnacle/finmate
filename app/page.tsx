@@ -23,6 +23,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Navbar from "@/components/Navbar";
 
 const Finmate = () => {
   // configuring the embla options
@@ -45,6 +46,7 @@ const Finmate = () => {
       <section className="hero">
         {/* <Spotlight /> */}
         <div className="px-2 py-8 relative z-[3] lg:flex lg:flex-col lg:items-center lg:justify-center">
+          <Navbar />
           <p className="bg-finmate_primary text-finmate_secondary text-center text-lg px-2 py-4 my-6 rounded-full flex flex-row items-center justify-evenly md:text-3xl lg:text-base lg:w-1/2">
             <Crown className="w-8 h-8 lg:w-6 lg:h-6" />
             #Finmate-MasterYourMoney
