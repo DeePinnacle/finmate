@@ -65,7 +65,7 @@ const page = () => {
               placeholder="Enter your password"
             />
           </div>
-          <Link href="" className="text-right font-semibold my-2 underline">
+          <Link href="/forgot-password" className="text-right font-semibold my-2 underline cursor-pointer">
             Forgot password
           </Link>
           <Button className="bg-finmate_primary h-12 text-lg">Sign in</Button>
