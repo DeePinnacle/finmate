@@ -234,13 +234,13 @@
     .nav  li{
       @apply my-5
     }
-    .login-wrapper div label{
+    .form-wrapper div label{
       @apply text-lg font-semibold
     }
-    .login-wrapper div{
+    .form-wrapper div{
       @apply mb-3
     }
-    .login-wrapper div input{
-      @apply outline-none border-b border-solid border-b-finmate_primary px-2 py-2 bg-transparent;
+    .form-wrapper div input{
+      @apply outline-none px-2 py-2 bg-slate-200 rounded-sm text-finmate_primary text-lg;
     }
 }

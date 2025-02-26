@@ -14,7 +14,7 @@ const page = () => {
         </p>
       </div>
       <form action="">
-        <div className="flex flex-col px-2 login-wrapper">
+        <div className="flex flex-col px-2 form-wrapper">
           <div className="flex flex-col mb-2">
             <label htmlFor="firstname" className="mb-2">
               Firstname:
