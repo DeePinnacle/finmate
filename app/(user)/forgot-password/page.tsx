@@ -29,7 +29,7 @@ const ForgotPassword = () => {
             />
             <div className="flex flex-row items-center justify-between my-2">
                 <Link href={"/sign-in"} className="text-lg text-finmate_primary font-semibold">Sign in</Link>
-                <Link href={"/sign-in"} className="text-lg text-finmate_primary font-semibold">Sign up</Link>
+                <Link href={"/sign-up"} className="text-lg text-finmate_primary font-semibold">Sign up</Link>
             </div>
             <Button className="bg-finmate_primary text-lg w-full h-12 my-3 hover:bg-finmate_primary">Reset Password</Button>
           </div>
