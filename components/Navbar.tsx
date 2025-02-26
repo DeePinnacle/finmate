@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import React from 'react'
 import { FaPiggyBank } from 'react-icons/fa'
-import NavSheet from './NavSheet';
 const Navbar = () => {
   return (
     <div className='w-full py-4 bg-finmate_primary flex flex-row items-center justify-between px-2 ring-offset-primary-foreground'>
@@ -8,8 +8,10 @@ const Navbar = () => {
             <FaPiggyBank className='text-finmate_secondary w-7 h-7' />
             <p className="text-finmate_secondary hidden">Finmate</p>
         </div>
-        <div>
-            <NavSheet />
+        <div className='flex flex-row items-center gap-2'>
+          <Link href={"/sign-in"} className='text-finmate_secondary cursor-pointer'>Sign-in</Link> 
+          <span className="text-finmate_secondary">/</span>
+          <Link href={"/sign-up"} className='text-finmate_secondary cursor-pointer'>Sign-up</Link> 
         </div>
     </div>
   )

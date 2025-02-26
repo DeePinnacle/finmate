@@ -228,4 +228,19 @@
     .btn__work__style{
       @apply bg-finmate_secondary text-finmate_primary px-2 py-3 h-14 w-3/5 flex flex-row items-center justify-center rounded-full shadow-lg shadow-finmate_secondary/30 hover:bg-transparent hover:delay-200 hover:transition-all hover:ease-in-out hover:text-finmate_secondary md:h-20 md:text-3xl
     }
+    .nav{
+      @apply my-3
+    }
+    .nav  li{
+      @apply my-5
+    }
+    .login-wrapper div label{
+      @apply text-finmate_secondary text-lg font-semibold
+    }
+    .login-wrapper div{
+      @apply mb-3
+    }
+    .login-wrapper div input{
+      @apply outline-none border-b border-solid border-b-finmate_primary px-2 py-2 bg-transparent;
+    }
 }
