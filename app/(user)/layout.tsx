@@ -1,12 +1,15 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
-const layout = ({ children }:{ children: React.ReactNode}) => {
+import { usePathname } from "next/navigation"
+const Layout = ({ children }:{ children: React.ReactNode}) => {
+  const pathname = usePathname()
   return (
     <div className="lg:flex lg:flex-col lg:items-center lg:justify-center">
     <div className="w-full min-h-screen bg-gradient-to-br from-finmate_secondary to-finmate_primary p-2">
         <div className='relative w-full h-96'>
             <Image 
-                src="/login.png" 
+                src={`${ pathname !== "/sign-in" ? "/register.png" : "login.png" }`} 
                 alt="login-image" 
                 fill 
                 priority 
@@ -20,4 +23,4 @@ const layout = ({ children }:{ children: React.ReactNode}) => {
   )
 }
 
-export default layout
+export default Layout
