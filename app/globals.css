@@ -235,7 +235,7 @@
       @apply my-5
     }
     .login-wrapper div label{
-      @apply text-finmate_secondary text-lg font-semibold
+      @apply text-lg font-semibold
     }
     .login-wrapper div{
       @apply mb-3
