@@ -38,7 +38,7 @@ const page = () => {
           </div>
           <Link href="" className="text-right font-semibold my-2 underline">Forgot password</Link>
           <Button className="bg-finmate_primary h-12 text-lg">Sign in</Button>
-          <span className="text-center my-2 block">Don&apos;t have an account yet? <Link href="/sign-up">Sign up</Link></span>
+          <span className="text-center my-2 block">Don&apos;t have an account yet? <Link href="/sign-up" className="font-semibold">Sign up</Link></span>
         </div>
       </form>
     </div>
