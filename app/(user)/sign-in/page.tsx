@@ -7,7 +7,7 @@ const page = () => {
     <div className="pb-9">
       <div className="flex flex-col items-center justify-center px-4 py-7">
         <h1 className="text-center text-finmate_primary text-2xl font-bold mb-2">
-          Hello! Welcome back{" "}
+          Hello! Welcome back👍{" "}
         </h1>
         <p className="text-center text-lg">
           Log in to unlock a smarter way to manage your money and take control

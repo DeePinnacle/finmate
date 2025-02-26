@@ -7,11 +7,10 @@ const page = () => {
     <div className="pb-9">
       <div className="flex flex-col items-center justify-center px-4 py-7">
         <h1 className="text-center text-finmate_primary text-2xl font-bold mb-2">
-          Hello! Welcome back{" "}
+          Join Finmate Today! ❤️{" "}
         </h1>
         <p className="text-center text-lg">
-          Log in to unlock a smarter way to manage your money and take control
-          of your financial future.
+          Sign up now and take your first stop towards smarter money management. Experience a world where penny counts.
         </p>
       </div>
       <form action="">
@@ -71,7 +70,7 @@ const page = () => {
           </Link>
           <Button className="bg-finmate_primary h-12 text-lg">Sign in</Button>
           <span className="text-center my-2 block">
-            Already have an account? <Link href="/sign-in" className="font-semibold">Sign in</Link>
+            Already have an account? <Link href="/sign-in" className="font-semibold">Sign up</Link>
           </span>
         </div>
       </form>
