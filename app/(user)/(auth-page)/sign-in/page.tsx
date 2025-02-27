@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const SignIn = () => {
   return (
     <div className="pb-9">
       <div className="flex flex-col items-center justify-center px-4 py-7">
@@ -36,13 +36,23 @@ const page = () => {
               placeholder="Enter your password"
             />
           </div>
-          <Link href="/forgot-password" className="text-right font-semibold my-2 underline cursor-pointer">Forgot password</Link>
+          <Link
+            href="/forgot-password"
+            className="text-right font-semibold my-2 underline cursor-pointer"
+          >
+            Forgot password
+          </Link>
           <Button className="bg-finmate_primary h-12 text-lg">Sign in</Button>
-          <span className="text-center my-2 block">Don&apos;t have an account yet? <Link href="/sign-up" className="font-semibold">Sign up</Link></span>
+          <span className="text-center my-2 block">
+            Don&apos;t have an account yet?{" "}
+            <Link href="/sign-up" className="font-semibold">
+              Sign up
+            </Link>
+          </span>
         </div>
       </form>
     </div>
   );
 };
 
-export default page;
+export default SignIn;

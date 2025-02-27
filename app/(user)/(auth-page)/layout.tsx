@@ -9,7 +9,7 @@ const Layout = ({ children }:{ children: React.ReactNode}) => {
     <div className="w-full min-h-screen bg-gradient-to-br from-finmate_secondary to-finmate_primary p-2">
         <div className='relative w-full h-96'>
             <Image 
-                src={`${ pathname !== "/sign-in" ? "/register.png" : "login.png" }`} 
+                src={`${ pathname !== "/sign-in" ? "/register.png" : "/login.png" }`} 
                 alt="login-image" 
                 fill 
                 priority 
