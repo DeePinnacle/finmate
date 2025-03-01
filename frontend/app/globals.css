@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  /* General Page Styling */
+  body {
+    margin: 0;
+    @apply bg-finmate_primary font-geist text-slate-300;
+  }
+
+  /* Hero Section with Radial Gradient */
+  .hero {
+    /* position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden; */
+    background: radial-gradient(circle at top center, black, #11271a);
+    @apply relative w-full overflow-hidden;
+  }
+
+  /* Square Grid Pattern Overlay */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.2) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px; /* Size of each grid cell */
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  /* Blurry Edges Overlay */
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Duplicate the background (so that the blur applies to the edges) */
+    background: radial-gradient(circle at top center, black, #11271a);
+    filter: blur(8px);
+    z-index: 2;
+    /* Use a mask to apply the blur only at the edges */
+    -webkit-mask-image: radial-gradient(
+      closest-side,
+      transparent 70%,
+      #11271a 100%
+    );
+    mask-image: radial-gradient(closest-side, transparent 70%, #11271a 100%);
+  }
+
+  /* Hero Content (stays crisp) */
+  /* .hero-content {
+      position: relative;
+      z-index: 3;
+    } */
+
+  /* Feature Section with Radial Gradient */
+  .feature-section {
+    /* background: radial-gradient(circle at top center, black, #11271A); */
+    @apply relative w-full overflow-hidden;
+  }
+
+  /* Hexagon Grid Pattern Overlay */
+  .feature-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.2) 30%,
+        transparent 30%
+      ),
+      radial-gradient(rgba(255, 255, 255, 0.2) 30%, transparent 30%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 43px; /* Offset second layer for staggered hexagon effect */
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  /* Blurry Edges Overlay */
+  /* .feature-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at top center, black, #11271A);
+  filter: blur(8px);
+  z-index: 2;
+  -webkit-mask-image: radial-gradient(closest-side, transparent 70%, #11271A 100%);
+          mask-image: radial-gradient(closest-side, transparent 70%, #11271A 100%);
+} */
+  .perspective {
+    perspective: 100px;
+  }
+  .perspective:hover .hover-effect {
+    transform-style: preserve-3d;
+    transform: translate(-10%);
+    transform: rotateY(-40deg);
+  }
+  .perspective .perspective-item {
+    transform-style: preserve-3d;
+    transform: translate(-10%);
+    /* transform: rotateX(10deg); */
+    transform: rotateY(-10deg);
+  }
+  /* carousel style */
+  .slider__carousel{
+    @apply overflow-hidden w-full max-w-[50rem] mx-auto;
+  }
+  .slider__viewport {
+    @apply overflow-hidden w-full;
+  }
+  .slider__track {
+    @apply flex flex-row gap-3;
+  }
+  .slider__carousel__item {
+    flex: 0 0 90%;
+    min-width: 0;
+    border-radius: 8px;
+    @apply bg-finmate_primary shadow-lg shadow-finmate_secondary/40 px-2 py-4
+  }
+    /* embla buttons  */
+    .embla__controls {
+      @apply my-4;
+    }
+    .embla__buttons {
+      @apply w-full flex flex-row items-center justify-center gap-7;
+    }
+    .embla__button {
+      display: flex;
+      flex-direction: col;
+      align-items: center;
+      justify-content: center;
+      @apply bg-finmate_primary w-14 h-14 rounded-full border border-solid border-[gray];
+    }
+    .embla__button:disabled {
+      @apply text-[gray];
+    }
+    .embla__button__svg {
+      @apply w-2/5 h-2/5 font-light;
+    }
+    .footer-ui li{
+      @apply my-3
+    }
+    .get__started__style{
+      @apply bg-finmate_primary text-finmate_secondary px-2 py-3 h-14 w-3/5 flex flex-row items-center justify-center;
+      @apply rounded-full shadow-lg shadow-finmate_secondary/30 md:h-20 md:text-3xl lg:text-base;
+    }
+    .btn__work__style{
+      @apply bg-finmate_secondary text-finmate_primary px-2 py-3 h-14 w-3/5 flex flex-row items-center justify-center rounded-full shadow-lg shadow-finmate_secondary/30 hover:bg-transparent hover:delay-200 hover:transition-all hover:ease-in-out hover:text-finmate_secondary md:h-20 md:text-3xl
+    }
+    .nav{
+      @apply my-3
+    }
+    .nav  li{
+      @apply my-5
+    }
+    .form-wrapper div label{
+      @apply text-lg font-semibold md:text-2xl lg:text-base
+    }
+    .form-wrapper div{
+      @apply mb-3
+    }
+    .form-wrapper div input{
+      @apply outline-none px-2 py-2 bg-slate-200 rounded-sm text-finmate_primary text-lg md:py-4 md:text-2xl;
+      @apply lg:text-base
+    }
+}
